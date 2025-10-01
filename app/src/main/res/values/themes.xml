@@ -17,8 +17,13 @@
 
         <!-- Window background -->
         <item name="android:windowBackground">@color/primary_dark_green</item>
+
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
+        <item name="android:popupMenuStyle">@style/CustomPopupMenu</item>
     </style>
 
     <!-- App Theme -->
     <style name="Theme.WellnessBuddy" parent="Base.Theme.WellnessBuddy" />
+
+
 </resources>

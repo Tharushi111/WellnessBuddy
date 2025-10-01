@@ -72,4 +72,26 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    // Gson for JSON serialization
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    // Material Design Components
+    implementation("com.google.android.material:material:1.11.0")
+
+    // Core AndroidX libraries
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+
+    // ConstraintLayout
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // Fragment KTX
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+
+    // ViewPager2
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }

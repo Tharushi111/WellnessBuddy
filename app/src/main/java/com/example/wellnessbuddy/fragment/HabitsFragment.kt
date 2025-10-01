@@ -165,4 +165,12 @@ class HabitsFragment : Fragment() {
         emptyState.visibility = View.GONE
         rvHabits.visibility = View.VISIBLE
     }
+
+    override fun onResume() {
+        super.onResume()
+        // Reload habits when fragment resumes
+        loadHabits()
+        habitAdapter.updateHabits(habitsList)
+        updateEmptyState()
+    }
 }

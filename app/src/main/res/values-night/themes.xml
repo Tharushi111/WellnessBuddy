@@ -7,6 +7,10 @@
         <item name="colorSecondary">@color/light_green</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/dark_green</item>
+
+
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
+        <item name="android:popupMenuStyle">@style/CustomPopupMenu</item>
     </style>
 
 </resources>

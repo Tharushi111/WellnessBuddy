@@ -58,12 +58,28 @@ class HabitAdapter(
 
     override fun getItemCount(): Int = habits.size
 
-    /**
-     * Show popup menu with Edit and Delete options
-     */
+    /* Show popup menu with Edit and Delete option */
     private fun showPopupMenu(view: View, habit: Habit) {
         val popupMenu = PopupMenu(view.context, view)
         popupMenu.inflate(R.menu.habit_item_menu)
+
+        // Force show icons
+        try {
+            val popup = PopupMenu::class.java.getDeclaredField("mPopup")
+            popup.isAccessible = true
+            val menu = popup.get(popupMenu)
+            menu.javaClass
+                .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                .invoke(menu, true)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        // 🔑 Remove default tint so vector icons keep their original colors
+        for (i in 0 until popupMenu.menu.size()) {
+            val item = popupMenu.menu.getItem(i)
+            item.icon?.setTintList(null)
+        }
 
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
@@ -81,6 +97,7 @@ class HabitAdapter(
 
         popupMenu.show()
     }
+
 
     /**
      * Update the habits list

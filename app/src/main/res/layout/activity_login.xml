@@ -2,9 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,37 +25,37 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:text="Login"
+            android:textColor="@color/accent_green"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/dark_green"
-            android:layout_marginBottom="24dp" />
+            android:textStyle="bold" />
 
         <!-- Email -->
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="12dp"
-            android:background="@drawable/edittext_background"
-            android:textColor="@color/black"
-            android:textColorHint="@color/gray"
-            android:layout_marginBottom="16dp" />
+            android:textColor="@color/accent_green"
+            android:textColorHint="@color/gray" />
 
         <!-- Password -->
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/edittext_background"
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="12dp"
-            android:background="@drawable/edittext_background"
-            android:textColor="@color/black"
-            android:textColorHint="@color/gray"
-            android:layout_marginBottom="24dp" />
+            android:textColor="@color/accent_green"
+            android:textColorHint="@color/gray" />
 
         <!-- Login Button -->
         <Button
@@ -75,10 +73,10 @@
             android:id="@+id/tvSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Don’t have an account? Sign up"
-            android:textSize="14sp"
-            android:textColor="@color/dark_green"
-            android:layout_marginTop="8dp" />
+            android:textColor="@color/accent_green"
+            android:textSize="14sp" />
 
     </LinearLayout>
 </ScrollView>
