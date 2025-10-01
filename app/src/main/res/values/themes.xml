@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Base.Theme.WellnessBuddy" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_dark_green</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/accent_green</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/primary_dark_green</item>
+    </style>
+
+    <!-- App Theme -->
+    <style name="Theme.WellnessBuddy" parent="Base.Theme.WellnessBuddy" />
+</resources>
