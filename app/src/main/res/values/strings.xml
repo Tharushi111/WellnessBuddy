@@ -35,6 +35,8 @@
     <string name="my_habits">My Habits</string>
     <string name="no_habits">No habits yet.\nTap + to add your first habit!</string>
     <string name="add_habit">Add Habit</string>
+    <string name="task_complete">Mark habit as complete</string>
+
 
     <!-- Mood Journal Fragment -->
     <string name="mood_welcome">How are you feeling today?</string>
@@ -42,6 +44,36 @@
     <string name="mood_history">Mood History</string>
     <string name="no_mood_entries">No mood entries yet.\nTap + to log your first mood!</string>
     <string name="add_mood">Add Mood</string>
+
+    <!-- Mood Dialog -->
+    <string name="log_mood">Log Your Mood</string>
+    <string name="how_feeling">How are you feeling?</string>
+    <string name="add_note_optional">Add a note (optional)</string>
+    <string name="whats_on_mind">What\'s on your mind?</string>
+
+    <!-- Mood Names -->
+    <string name="happy">Happy</string>
+    <string name="excited">Excited</string>
+    <string name="calm">Calm</string>
+    <string name="sad">Sad</string>
+    <string name="angry">Angry</string>
+    <string name="anxious">Anxious</string>
+    <string name="tired">Tired</string>
+    <string name="sick">Sick</string>
+    <string name="confident">Confident</string>
+    <string name="loved">Loved</string>
+
+    <!-- Mood Descriptions -->
+    <string name="happy_desc">Feeling joyful and content</string>
+    <string name="excited_desc">Full of energy and enthusiasm</string>
+    <string name="calm_desc">Peaceful and relaxed</string>
+    <string name="sad_desc">Feeling down or upset</string>
+    <string name="angry_desc">Frustrated or irritated</string>
+    <string name="anxious_desc">Worried or nervous</string>
+    <string name="tired_desc">Exhausted or sleepy</string>
+    <string name="sick_desc">Not feeling well physically</string>
+    <string name="confident_desc">Feeling self-assured</string>
+    <string name="loved_desc">Feeling cared for and appreciated</string>
 
     <!-- Settings Fragment -->
     <string name="notifications">Notifications</string>
@@ -54,4 +86,10 @@
     <string name="user_name">Wellness User</string>
     <string name="user_email">user@wellnessbuddy.com</string>
     <string name="app_version">Version 1.0.0</string>
+
+    <!-- Common -->
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
 </resources>

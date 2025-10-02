@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,9 +43,7 @@ class HabitsFragment : Fragment() {
         setupRecyclerView()
 
         // FAB click listener
-        fabAddHabit.setOnClickListener {
-            showAddHabitDialog()
-        }
+        fabAddHabit.setOnClickListener { showAddHabitDialog() }
 
         return view
     }
@@ -52,15 +51,10 @@ class HabitsFragment : Fragment() {
     private fun setupRecyclerView() {
         habitAdapter = HabitAdapter(
             habits = habitsList,
-            onHabitClick = { habit ->
-                // Optional: Show habit details
-            },
-            onEditClick = { habit ->
-                showEditHabitDialog(habit)
-            },
-            onDeleteClick = { habit ->
-                showDeleteConfirmation(habit)
-            },
+            context = requireContext(),
+            onHabitClick = { /* Optional: show habit details */ },
+            onEditClick = { habit -> showEditHabitDialog(habit) },
+            onDeleteClick = { habit -> showDeleteConfirmation(habit) },
             onCompletionChange = { habit, isCompleted ->
                 habit.isCompleted = isCompleted
                 prefsHelper.updateHabit(habit)
@@ -85,12 +79,10 @@ class HabitsFragment : Fragment() {
             context = requireContext(),
             existingHabit = null,
             onSave = { newHabit ->
-                // Add habit to list and save
                 habitsList.add(newHabit)
                 prefsHelper.addHabit(newHabit)
                 habitAdapter.addHabit(newHabit)
                 updateEmptyState()
-
                 android.widget.Toast.makeText(
                     requireContext(),
                     "Habit added successfully!",
@@ -106,13 +98,11 @@ class HabitsFragment : Fragment() {
             context = requireContext(),
             existingHabit = habit,
             onSave = { updatedHabit ->
-                // Update habit in list and save
                 val index = habitsList.indexOfFirst { it.id == updatedHabit.id }
                 if (index != -1) {
                     habitsList[index] = updatedHabit
                     prefsHelper.updateHabit(updatedHabit)
                     habitAdapter.updateHabits(habitsList)
-
                     android.widget.Toast.makeText(
                         requireContext(),
                         "Habit updated successfully!",
@@ -125,14 +115,22 @@ class HabitsFragment : Fragment() {
     }
 
     private fun showDeleteConfirmation(habit: Habit) {
-        AlertDialog.Builder(requireContext())
+        val dialog = AlertDialog.Builder(requireContext())
             .setTitle("Delete Habit")
             .setMessage("Are you sure you want to delete \"${habit.name}\"?")
-            .setPositiveButton("Delete") { _, _ ->
-                deleteHabit(habit)
-            }
+            .setPositiveButton("Delete") { _, _ -> deleteHabit(habit) }
             .setNegativeButton("Cancel", null)
-            .show()
+            .create()
+
+        dialog.setOnShowListener {
+            val positive = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            val negative = dialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+            val accentGreen = ContextCompat.getColor(requireContext(), R.color.accent_green)
+            positive.setTextColor(accentGreen)
+            negative.setTextColor(accentGreen)
+        }
+
+        dialog.show()
     }
 
     private fun deleteHabit(habit: Habit) {
@@ -168,7 +166,6 @@ class HabitsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        // Reload habits when fragment resumes
         loadHabits()
         habitAdapter.updateHabits(habitsList)
         updateEmptyState()

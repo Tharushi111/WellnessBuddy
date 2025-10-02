@@ -59,14 +59,15 @@
             app:layout_constraintEnd_toStartOf="@id/checkboxComplete" />
 
         <!-- Completion Checkbox -->
-        <CheckBox
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/checkboxComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/accent_green"
-            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/task_complete"
+            app:buttonTint="@color/background_dark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivMore" />
+            app:layout_constraintEnd_toStartOf="@id/ivMore"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- More Options Icon -->
         <ImageView

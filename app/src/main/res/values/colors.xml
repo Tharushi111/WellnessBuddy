@@ -33,4 +33,6 @@
     <!-- Button Colors -->
     <color name="button_background">#2D7A5F</color>
     <color name="button_text">#FFFFFF</color>
+    <color name="tick_color">#2E7D32</color>
+
 </resources>

@@ -28,9 +28,23 @@ class AddHabitDialog(
     private var selectedEmoji = "💧" // Default emoji
 
     private val emojiList = listOf(
-        "💧", "🧘", "🏃", "💤", "📚", "🍎",
-        "🚴", "🎵", "☕", "🌅", "🧹", "💪"
+        // Health & Fitness
+        "💧", "🧘", "🏃", "🚴", "💪", "🛌", "😴", "🧗", "🏊", "🤸",
+
+        // Food & Lifestyle
+        "🍎", "🥗", "🍵", "☕", "🥛", "🍕",
+
+        // Study & Productivity
+        "📚", "💻", "🎧", "📰", "🖊️", "📅","⏰",
+
+        // Daily Habits & Mindfulness
+        "🌅", "🌙", "🧹", "🛁", "🪥", "🛍️", "🚶", "🙇", "🙏", "🎵",
+
+        // Fun & Motivation
+        "🎨", "🎮", "🎬", "📷", "✈️", "🎯"
     )
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

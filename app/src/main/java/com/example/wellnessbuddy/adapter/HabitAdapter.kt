@@ -1,16 +1,18 @@
 package com.example.wellnessbuddy
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
-import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.widget.PopupMenu
 
 class HabitAdapter(
     private var habits: MutableList<Habit>,
+    private val context: Context,
     private val onHabitClick: (Habit) -> Unit,
     private val onEditClick: (Habit) -> Unit,
     private val onDeleteClick: (Habit) -> Unit,
@@ -39,86 +41,61 @@ class HabitAdapter(
         holder.tvHabitTime.text = habit.time
         holder.checkboxComplete.isChecked = habit.isCompleted
 
-        // Item click listener
-        holder.itemView.setOnClickListener {
-            onHabitClick(habit)
-        }
+        // Item click
+        holder.itemView.setOnClickListener { onHabitClick(habit) }
 
-        // Checkbox change listener
+        // Checkbox change
         holder.checkboxComplete.setOnCheckedChangeListener { _, isChecked ->
             habit.isCompleted = isChecked
             onCompletionChange(habit, isChecked)
         }
 
-        // More options menu
-        holder.ivMore.setOnClickListener { view ->
-            showPopupMenu(view, habit)
+        // More options menu using PopupMenu
+        holder.ivMore.setOnClickListener {
+            showPopupMenu(holder, habit)
         }
     }
 
     override fun getItemCount(): Int = habits.size
 
-    /* Show popup menu with Edit and Delete option */
-    private fun showPopupMenu(view: View, habit: Habit) {
-        val popupMenu = PopupMenu(view.context, view)
-        popupMenu.inflate(R.menu.habit_item_menu)
+    private fun showPopupMenu(holder: HabitViewHolder, habit: Habit) {
+        val popup = PopupMenu(context, holder.ivMore)
+        popup.menu.add("Edit")
+        popup.menu.add("Delete")
 
-        // Force show icons
+        // Optional: force show icons if needed
         try {
-            val popup = PopupMenu::class.java.getDeclaredField("mPopup")
-            popup.isAccessible = true
-            val menu = popup.get(popupMenu)
-            menu.javaClass
+            val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+            fieldMPopup.isAccessible = true
+            val menuPopupHelper = fieldMPopup.get(popup)
+            menuPopupHelper.javaClass
                 .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
-                .invoke(menu, true)
+                .invoke(menuPopupHelper, true)
         } catch (e: Exception) {
             e.printStackTrace()
         }
 
-        // 🔑 Remove default tint so vector icons keep their original colors
-        for (i in 0 until popupMenu.menu.size()) {
-            val item = popupMenu.menu.getItem(i)
-            item.icon?.setTintList(null)
-        }
-
-        popupMenu.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.action_edit -> {
-                    onEditClick(habit)
-                    true
-                }
-                R.id.action_delete -> {
-                    onDeleteClick(habit)
-                    true
-                }
-                else -> false
+        popup.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.title) {
+                "Edit" -> onEditClick(habit)
+                "Delete" -> onDeleteClick(habit) // just call fragment's callback
             }
+            true
         }
-
-        popupMenu.show()
+        popup.show()
     }
 
-
-    /**
-     * Update the habits list
-     */
     fun updateHabits(newHabits: List<Habit>) {
         habits.clear()
         habits.addAll(newHabits)
         notifyDataSetChanged()
     }
 
-    /**
-     * Add a new habit
-     */
     fun addHabit(habit: Habit) {
         habits.add(habit)
         notifyItemInserted(habits.size - 1)
     }
 
-    /**
-     * Remove a habit
-     */
     fun removeHabit(habit: Habit) {
         val position = habits.indexOf(habit)
         if (position != -1) {
