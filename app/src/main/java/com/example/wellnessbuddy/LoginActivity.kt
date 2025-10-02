@@ -1,7 +1,6 @@
 package com.example.wellnessbuddy
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -28,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
 
             val savedEmail = sharedPreferences.getString("user_email", null)
             val savedPassword = sharedPreferences.getString("user_password", null)
+            val savedName = sharedPreferences.getString("user_name", "Wellness User")
 
             when {
                 email.isEmpty() -> etEmail.error = "Enter your email"
@@ -39,7 +39,16 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
+                    // Save logged-in user info
+                    sharedPreferences.edit()
+                        .putBoolean("is_logged_in", true)
+                        .putString("logged_user_email", email)
+                        .putString("logged_user_name", savedName)
+                        .apply()
+
                     Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+
+                    // Navigate to MainActivity
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()

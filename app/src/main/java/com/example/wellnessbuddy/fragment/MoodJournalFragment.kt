@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+
+
 
 class MoodJournalFragment : Fragment() {
 
@@ -101,15 +105,40 @@ class MoodJournalFragment : Fragment() {
     }
 
     private fun showDeleteConfirmation(mood: MoodEntry) {
-        AlertDialog.Builder(requireContext())
+        val builder = AlertDialog.Builder(requireContext())
             .setTitle("Delete Mood Entry")
             .setMessage("Are you sure you want to delete this mood entry?")
             .setPositiveButton("Delete") { _, _ ->
                 deleteMood(mood)
             }
             .setNegativeButton("Cancel", null)
-            .show()
+
+        val dialog = builder.create()
+
+        dialog.setOnShowListener {
+            // Change button text colors
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                .setTextColor(ContextCompat.getColor(requireContext(), R.color.accent_green))
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+                .setTextColor(ContextCompat.getColor(requireContext(), R.color.accent_green))
+
+            // Change dialog background color
+            dialog.window?.setBackgroundDrawableResource(R.color.background_dark)
+
+            // Change title text color
+            val titleId = resources.getIdentifier("alertTitle", "id", "android")
+            dialog.findViewById<TextView>(titleId)
+                ?.setTextColor(ContextCompat.getColor(requireContext(), R.color.accent_green))
+
+            // Change message text color
+            dialog.findViewById<TextView>(android.R.id.message)
+                ?.setTextColor(ContextCompat.getColor(requireContext(), R.color.accent_green))
+        }
+
+        dialog.show()
     }
+
+
 
     private fun deleteMood(mood: MoodEntry) {
         moodsList.remove(mood)

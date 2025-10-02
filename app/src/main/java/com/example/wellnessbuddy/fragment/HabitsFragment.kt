@@ -122,6 +122,9 @@ class HabitsFragment : Fragment() {
             .setNegativeButton("Cancel", null)
             .create()
 
+        // Set dialog background to green
+        dialog.window?.setBackgroundDrawableResource(R.color.background_dark)
+
         dialog.setOnShowListener {
             val positive = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
             val negative = dialog.getButton(AlertDialog.BUTTON_NEGATIVE)
@@ -132,6 +135,7 @@ class HabitsFragment : Fragment() {
 
         dialog.show()
     }
+
 
     private fun deleteHabit(habit: Habit) {
         habitsList.remove(habit)

@@ -18,4 +18,9 @@
         <item name="android:popupElevation">8dp</item>
     </style>
 
+    <!-- Launch Screen / Splash Theme with Dark Background -->
+    <style name="Theme.WellnessBuddy.Launch" parent="Theme.WellnessBuddy.NoActionBar">
+        <item name="android:windowBackground">@color/primary_green</item>
+    </style>
+
 </resources>

@@ -77,7 +77,9 @@
 
     <!-- Settings Fragment -->
     <string name="notifications">Notifications</string>
-    <string name="hydration_reminder">Hydration Reminder</string>
+    <string name="hydration_reminders">Hydration Reminders</string>
+    <string name="hydration_reminder">Enable Reminders</string>
+    <string name="hydration_reminder_desc">Get notifications to drink water regularly</string>
     <string name="reminder_interval">Reminder Interval</string>
     <string name="default_interval">60 minutes</string>
     <string name="app_settings">App Settings</string>

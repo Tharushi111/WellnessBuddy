@@ -20,6 +20,8 @@
     <color name="text_tertiary">#A8D5BA</color>
     <color name="gray">#9E9E9E</color>
     <color name="gray_light">#B0B0B0</color>
+    <color name="background_light">#F5F5F5</color>
+
 
 
     <!-- Common Colors -->
