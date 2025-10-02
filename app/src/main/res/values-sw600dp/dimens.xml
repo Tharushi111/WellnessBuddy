@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablet sizes (sw600dp = 7" tablets and larger) -->
+
+    <!-- Mood Item Sizes - Larger for tablets -->
+    <dimen name="mood_emoji_size">70dp</dimen>
+    <dimen name="mood_emoji_text_size">48sp</dimen>
+    <dimen name="mood_note_text_size">18sp</dimen>
+    <dimen name="mood_datetime_text_size">14sp</dimen>
+
+    <!-- Dialog Sizes - Larger for tablets -->
+    <dimen name="dialog_emoji_size">48sp</dimen>
+    <dimen name="dialog_selected_emoji_size">72sp</dimen>
+
+</resources>
