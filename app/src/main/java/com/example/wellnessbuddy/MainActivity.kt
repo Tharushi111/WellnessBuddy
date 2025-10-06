@@ -1,4 +1,7 @@
 package com.example.wellnessbuddy
+import com.example.wellnessbuddy.fragment.HabitsFragment
+import com.example.wellnessbuddy.fragment.MoodJournalFragment
+
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -10,6 +13,8 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.content.Intent
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,6 +54,11 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(MoodJournalFragment())
                     true
                 }
+
+                R.id.nav_chart -> {
+                    loadFragment(MoodChartFragment())
+                    true
+                }
                 R.id.nav_settings -> {
                     loadFragment(SettingsFragment())
                     true
@@ -59,8 +69,10 @@ class MainActivity : AppCompatActivity() {
 
         // Profile icon click listener
         ivProfile.setOnClickListener {
-            android.widget.Toast.makeText(this, "Profile clicked", android.widget.Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
+
 
         // Back press handling using OnBackPressedDispatcher
         onBackPressedDispatcher.addCallback(this) {

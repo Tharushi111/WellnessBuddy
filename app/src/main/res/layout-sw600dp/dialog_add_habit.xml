@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- TABLET PORTRAIT - sw600dp -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/dialog_background"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,41 +21,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add New Habit"
-            android:textSize="20sp"
+            android:textSize="28sp"
             android:textColor="@color/accent_green"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="24dp" />
 
         <!-- Emoji Selector Label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select Icon"
-            android:textSize="14sp"
+            android:textSize="18sp"
             android:textColor="@color/text_primary"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="12dp" />
 
         <!-- Emoji Grid -->
         <GridLayout
             android:id="@+id/gridEmojis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="6"
-            android:layout_marginBottom="16dp"
+            android:columnCount="8"
+            android:layout_marginBottom="24dp"
             android:alignmentMode="alignMargins"
             android:useDefaultMargins="true" />
 
         <!-- Selected Emoji Display -->
         <TextView
             android:id="@+id/tvSelectedEmoji"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:text="💧"
-            android:textSize="36sp"
+            android:textSize="48sp"
             android:gravity="center"
             android:background="@drawable/selected_emoji_bg"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="24dp" />
 
         <!-- Habit Name Input -->
         <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +65,7 @@
             app:boxBackgroundColor="@color/surface_dark"
             app:boxStrokeColor="@color/accent_green"
             app:hintTextColor="@color/accent_green"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="24dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -71,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_primary"
+                android:textSize="18sp"
                 android:inputType="textCapSentences"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +86,7 @@
             app:boxBackgroundColor="@color/surface_dark"
             app:boxStrokeColor="@color/accent_green"
             app:hintTextColor="@color/accent_green"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="32dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -91,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_primary"
+                android:textSize="18sp"
                 android:inputType="text"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -108,6 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
+                android:textSize="16sp"
                 android:textColor="@color/text_secondary" />
 
             <com.google.android.material.button.MaterialButton
@@ -115,8 +120,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
+                android:textSize="16sp"
                 android:textColor="@color/white"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 app:backgroundTint="@color/secondary_green" />
         </LinearLayout>
 

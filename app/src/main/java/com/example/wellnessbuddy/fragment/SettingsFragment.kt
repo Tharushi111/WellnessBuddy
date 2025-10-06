@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.switchmaterial.SwitchMaterial
+import com.example.wellnessbuddy.util.SharedPreferencesHelper
 
 class SettingsFragment : Fragment() {
 
@@ -63,19 +64,22 @@ class SettingsFragment : Fragment() {
         layoutLogout = view.findViewById(R.id.layoutLogout)
         tvIntervalValue = view.findViewById(R.id.tvIntervalValue)
 
-        // Initialize helpers
-        prefsHelper = SharedPreferencesHelper(requireContext())
+        // Get logged-in user email
+        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", android.content.Context.MODE_PRIVATE)
+        val loggedUserEmail = sharedPreferences.getString("logged_user_email", "") ?: ""
+
+        // Initialize helpers with user email
+        prefsHelper = SharedPreferencesHelper(requireContext(), loggedUserEmail)
         hydrationManager = HydrationReminderManager(requireContext())
 
-        // Load saved preferences & user info
+        // Load preferences & user info
         loadPreferences()
         loadUserInfo()
-
-        // Setup listeners
         setupListeners()
 
         return view
     }
+
 
     private fun loadPreferences() {
         // Load hydration reminder status

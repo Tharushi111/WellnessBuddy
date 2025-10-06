@@ -33,7 +33,6 @@
             </intent-filter>
         </activity>
 
-
         <!-- Onboarding Activity -->
         <activity
             android:name=".OnboardingActivity"
@@ -55,6 +54,12 @@
         <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.WellnessBuddy.NoActionBar" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".ProfileActivity"
             android:exported="false"
             android:theme="@style/Theme.WellnessBuddy.NoActionBar" />
 

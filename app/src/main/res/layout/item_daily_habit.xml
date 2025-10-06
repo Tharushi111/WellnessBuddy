@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/surface_dark"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Habit Icon -->
+        <TextView
+            android:id="@+id/tvHabitIconDaily"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="💧"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:background="@drawable/habit_icon_bg" />
+
+        <!-- Habit Name -->
+        <TextView
+            android:id="@+id/tvHabitNameDaily"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Drink Water"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="16dp" />
+
+        <!-- Status Icon -->
+        <TextView
+            android:id="@+id/tvStatusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            android:textSize="24sp"
+            android:textColor="@color/success"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

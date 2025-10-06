@@ -1,4 +1,4 @@
-package com.example.wellnessbuddy
+package com.example.wellnessbuddy.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,9 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wellnessbuddy.model.MoodEntry
+import com.example.wellnessbuddy.R
+
 
 class MoodAdapter(
     private var moods: MutableList<MoodEntry>,

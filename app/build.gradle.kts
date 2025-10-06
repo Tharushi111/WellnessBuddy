@@ -13,7 +13,6 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,6 +25,11 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -34,6 +38,7 @@ android {
         jvmTarget = "11"
     }
 }
+
 
 dependencies {
 
@@ -99,4 +104,7 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     implementation("com.google.android.flexbox:flexbox:3.0.0")
+
+    // MPAndroidChart for beautiful progress charts (NEW - REQUIRED!)
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

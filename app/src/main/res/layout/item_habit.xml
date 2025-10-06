@@ -64,10 +64,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/task_complete"
-            app:buttonTint="@color/background_dark"
+            app:buttonTint="@color/accent_green"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivMore"
+            app:layout_constraintEnd_toStartOf="@id/ivChart"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Chart Icon (NEW) -->
+        <ImageView
+            android:id="@+id/ivChart"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_chart"
+            android:contentDescription="View Progress Chart"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/accent_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivMore" />
 
         <!-- More Options Icon -->
         <ImageView

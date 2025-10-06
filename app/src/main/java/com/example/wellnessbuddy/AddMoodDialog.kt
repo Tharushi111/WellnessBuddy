@@ -10,6 +10,7 @@ import android.widget.GridLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
+import com.example.wellnessbuddy.model.MoodEntry
 
 class AddMoodDialog(
     context: Context,
