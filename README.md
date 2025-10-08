@@ -65,14 +65,18 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 
 ---
 
-## 🖼️ **App UI's**
+<p align="center"> <b>✨ Explore the beautiful and user-friendly interfaces of the WellnessBuddy App ✨</b> </p>
 
-| Launch | Onboarding 1 | Onboarding 2 | Login | Signup |
-|:--:|:--:|:--:|:--:|:--:|
+🚀 Onboarding & Authentication Screens
+
+|                      Launch                     |                     Onboarding 1                     |                     Onboarding 2                     |                      Login                     |                      Signup                     |
+| :---------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------: |
 | <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/> | <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
 
-| Home (Habits) | Mood Journal | Hydration Notification | Moods Chart |
-|:--:|:--:|:--:|:--:|:--:|
+🌿 Main Features
+
+|                  Home (Habits)                  |                      Mood Journal                     |               Hydration Notification               |                   Moods Chart                  |
+| :---------------------------------------------: | :---------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------: |
 | <img src="screenshots/habits.png" width="200"/> | <img src="screenshots/mood_journal.png" width="200"/> | <img src="screenshots/hydration.png" width="200"/> | <img src="screenshots/moods.png" width="200"/> |
 
 
