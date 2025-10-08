@@ -71,9 +71,9 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 |:--:|:--:|:--:|:--:|:--:|
 | <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/> | <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
 
-| Home (Habits) | Mood Journal | Add Habit | Hydration Notification | Moods List |
+| Home (Habits) | Mood Journal | Hydration Notification | Moods Chart |
 |:--:|:--:|:--:|:--:|:--:|
-| <img src="screenshots/habits.png" width="200"/> | <img src="screenshots/mood_journal.png" width="200"/> | <img src="screenshots/add_habit.png" width="200"/> | <img src="screenshots/hydration.png" width="200"/> | <img src="screenshots/moods.png" width="200"/> |
+| <img src="screenshots/habits.png" width="200"/> | <img src="screenshots/mood_journal.png" width="200"/> | <img src="screenshots/hydration.png" width="200"/> | <img src="screenshots/moods.png" width="200"/> |
 
 
 ## 🔔 **Hydration Reminder (WorkManager)**
