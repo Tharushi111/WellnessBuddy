@@ -9,7 +9,7 @@
 ---
 
 ## 🧘‍♀️ **Overview**
-**WellnessBuddy** is an Android mobile application designed to help users build healthy habits, track their moods, and stay consistent with hydration reminders — all in one beautiful, calm interface.
+**WellnessBuddy** is an Android mobile application designed to help users build healthy habits, track their moods, and stay consistent with hydration reminders, all in one beautiful, calm interface.
 
 Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simplicity, mindfulness, and user well-being.
 
