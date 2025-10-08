@@ -68,13 +68,19 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 
 <p align="center"> <b>✨ Explore the beautiful and user-friendly interfaces of the WellnessBuddy App ✨</b> </p>
 
-🚀 Onboarding & Authentication Screens
+🚀 **Launch and Onboarding Screens**
 
-|                      Launch                     |                     Onboarding 1                     |                     Onboarding 2                     |                      Login                     |                      Signup                     |
-| :---------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------: |
-| <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/> | <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
+|                      Launch                     |                     Onboarding 1                     |                     Onboarding 2                     |
+| :---------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------------: |
+| <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/> |
 
-🌿 Main Features
+🔐 **Authentication Screens**
+
+|                      Login                     |                      Signup                     |
+| :--------------------------------------------: | :---------------------------------------------: |
+| <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
+
+🌿 **Main Features**
 
 |                  Home (Habits)                  |                      Mood Journal                     |               Hydration Notification               |                   Moods Chart                  |
 | :---------------------------------------------: | :---------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------: |
