@@ -21,10 +21,10 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 |-------------|----------------|
 | **🌅 Launch & Onboarding** | Animated launch screen followed by smooth onboarding screens introducing the app. |
 | **🔐 Login & Signup** | Secure user authentication with validation and data persistence using SharedPreferences. |
-| **📆 Habit Tracker** | Add, edit, and delete your daily habits — each with an emoji, name, and time. Display habit progress of each day |
+| **📆 Habit Tracker** | Add, edit, and delete your daily habits, each with an emoji, name, and time. Display habit progress of each day |
 | **😊 Mood Journal** | Log your daily mood using expressive emojis and optional notes. |
 | **💧 Hydration Reminder** | Get regular notifications reminding you to drink water and stay hydrated. |
-| **📊 7 Days Mood Entry Chart** | visually represent Mood entry in 7 days. |
+| **📊 7 Days Mood Entry Chart** | visually represent Mood entry of each day. |
 
 
 ---
