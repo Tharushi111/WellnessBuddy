@@ -64,6 +64,7 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 | Accent (10%) | Accent Green | `#7FD88D` |
 
 ---
+## **🖼️ App UI’s**
 
 <p align="center"> <b>✨ Explore the beautiful and user-friendly interfaces of the WellnessBuddy App ✨</b> </p>
 
