@@ -67,7 +67,7 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 
 ## 🖼️ **App UI's**
 
-| Launch | Onboarding | Login | Signup |
+| Launch | Onboarding 1 | Onboarding 2 | Login | Signup |
 |:--:|:--:|:--:|:--:|
 | <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/>| <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
 
