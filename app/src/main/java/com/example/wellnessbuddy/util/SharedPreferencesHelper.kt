@@ -26,7 +26,7 @@ class SharedPreferencesHelper(context: Context, private val userEmail: String) {
     // Prefix each key with the user email to isolate data per user
     private fun userKey(key: String) = "${userEmail}_$key"
 
-    // ================= HABITS =================
+    //HABITS
     fun saveHabits(habits: List<Habit>) {
         val habitsJson = habits.map { it.toJson() }
         prefs.edit().putString(userKey(KEY_HABITS), gson.toJson(habitsJson)).apply()
@@ -61,7 +61,7 @@ class SharedPreferencesHelper(context: Context, private val userEmail: String) {
         deleteCompletionHistoryForHabit(habitId)
     }
 
-    // ================= COMPLETION HISTORY =================
+    //COMPLETION HISTORY
     fun saveCompletionHistory(completion: HabitCompletion) {
         val history = loadAllCompletionHistory()
         history.removeAll { it.habitId == completion.habitId && it.date == completion.date }
@@ -89,7 +89,7 @@ class SharedPreferencesHelper(context: Context, private val userEmail: String) {
         prefs.edit().putString(userKey(KEY_COMPLETION_HISTORY), gson.toJson(history)).apply()
     }
 
-    // ================= MOODS =================
+    //MOODS
     fun loadMoodEntries(): MutableList<MoodEntry> {
         val json = prefs.getString(userKey(KEY_MOOD_ENTRIES), null) ?: return mutableListOf()
         val type = object : TypeToken<List<String>>() {}.type
@@ -114,7 +114,7 @@ class SharedPreferencesHelper(context: Context, private val userEmail: String) {
         prefs.edit().putString(userKey(KEY_MOOD_ENTRIES), gson.toJson(listOfStrings)).apply()
     }
 
-    // ================= HYDRATION REMINDER =================
+    //HYDRATION REMINDER
     fun isHydrationEnabled(): Boolean {
         return prefs.getBoolean(userKey(KEY_HYDRATION_ENABLED), false)
     }

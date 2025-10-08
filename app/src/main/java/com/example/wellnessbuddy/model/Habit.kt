@@ -5,7 +5,7 @@ import java.util.UUID
 data class Habit(
     var id: String = UUID.randomUUID().toString(),
     var name: String,
-    var icon: String, // Emoji like 💧, 🧘, 🏃
+    var icon: String, // Emoji
     var time: String, // Time or description like "8:00 AM"
     var isCompleted: Boolean = false,
     var createdAt: Long = System.currentTimeMillis()

@@ -77,7 +77,7 @@ class HabitAdapter(
         popupMenu.show()
     }
 
-    // -------- Utility Functions --------
+    //Utility Functions
     fun addHabit(habit: Habit) {
         habits.add(habit)
         notifyItemInserted(habits.size - 1)
@@ -104,7 +104,7 @@ class HabitAdapter(
         notifyDataSetChanged()
     }
 
-    // -------- Getter for habits --------
+    //Getter for habits
     fun getHabits(): List<Habit> {
         return habits
     }
