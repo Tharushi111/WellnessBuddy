@@ -1,35 +1,35 @@
-# 💚 **WellnessBuddy – Your Personal Wellness Companion**
+#  **WellnessBuddy – Your Personal Wellness Companion**
 
 <p align="center">
   <img src="logo.png" alt="WellnessBuddy Logo" width="120" />
 </p>
 
-### 🌱 *Empower your mind, body, and routine with balance and positivity.*
+###  *Empower your mind, body, and routine with balance and positivity.*
 
 ---
 
-## 🧘‍♀️ **Overview**
+##  **Overview**
 **WellnessBuddy** is an Android mobile application designed to help users build healthy habits, track their moods, and stay consistent with hydration reminders, all in one beautiful, calm interface.
 
 Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simplicity, mindfulness, and user well-being.
 
 ---
 
-## ✨ **Main Features**
+##  **Main Features**
 
-| 🌿 Feature | 💡 Description |
+|  Feature |  Description |
 |-------------|----------------|
-| **🌅 Launch & Onboarding** | Animated launch screen followed by smooth onboarding screens introducing the app. |
-| **🔐 Login & Signup** | Secure user authentication with validation and data persistence using SharedPreferences. |
-| **📆 Habit Tracker** | Add, edit, and delete your daily habits, each with an emoji, name, and time. Display habit progress of each day |
-| **😊 Mood Journal** | Log your daily mood using expressive emojis and optional notes. |
-| **💧 Hydration Reminder** | Get regular notifications reminding you to drink water and stay hydrated. |
-| **📊 7 Days Mood Entry Chart** | visually represent Mood entry of each day. |
+| **Launch & Onboarding** | Animated launch screen followed by smooth onboarding screens introducing the app. |
+| **Login & Signup** | Secure user authentication with validation and data persistence using SharedPreferences. |
+| **Habit Tracker** | Add, edit, and delete your daily habits, each with an emoji, name, and time. Display habit progress of each day |
+| **Mood Journal** | Log your daily mood using expressive emojis and optional notes. |
+| **Hydration Reminder** | Get regular notifications reminding you to drink water and stay hydrated. |
+| **7 Days Mood Entry Chart** | visually represent Mood entry of each day. |
 
 
 ---
 
-## 🧩 **Tech Stack**
+##  **Tech Stack**
 
 | Tool | Purpose |
 |------|----------|
@@ -43,7 +43,7 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 
 ---
 
-## ⚙️ **Installation Guide**
+##  **Installation Guide**
 
 1. Clone this repository:
    ```bash
@@ -55,7 +55,7 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 
 ---
 
-## 🌈 **Color Palette (60–30–10 Rule)**
+##  **Color Palette (60–30–10 Rule)**
 
 | Usage | Color | HEX |
 |--------|--------|------|
@@ -64,36 +64,36 @@ Built with a nature-inspired **dark green theme**, WellnessBuddy focuses on simp
 | Accent (10%) | Accent Green | `#7FD88D` |
 
 ---
-## **🖼️ App UI’s**
+## ** App UI’s**
 
-<p align="center"> <b>✨ Explore the beautiful and user-friendly interfaces of the WellnessBuddy App ✨</b> </p>
+<p align="center"> <b> Explore the beautiful and user-friendly interfaces of the WellnessBuddy App </b> </p>
 
-🚀 **Launch and Onboarding Screens**
+ **Launch and Onboarding Screens**
 
 |                      Launch                     |                     Onboarding 1                     |                     Onboarding 2                     |
 | :---------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------------: |
 | <img src="screenshots/launch.png" width="200"/> | <img src="screenshots/onboarding1.png" width="200"/> | <img src="screenshots/onboarding2.png" width="200"/> |
 
-🔐 **Authentication Screens**
+ **Authentication Screens**
 
 |                      Login                     |                      Signup                     |
 | :--------------------------------------------: | :---------------------------------------------: |
 | <img src="screenshots/login.png" width="200"/> | <img src="screenshots/signup.png" width="200"/> |
 
-🌿 **Main Features**
+ **Main Features**
 
 |                  Home (Habits)                  |                      Mood Journal                     |               Hydration Notification               |                   Moods Chart                  |
 | :---------------------------------------------: | :---------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------: |
 | <img src="screenshots/habits.png" width="200"/> | <img src="screenshots/mood_journal.png" width="200"/> | <img src="screenshots/hydration.png" width="200"/> | <img src="screenshots/moods.png" width="200"/> |
 
 
-## 🔔 **Hydration Reminder (WorkManager)**
-💧 WellnessBuddy uses **WorkManager** to send timely hydration reminders, even when the app is closed.  
+##  **Hydration Reminder (WorkManager)**
+ WellnessBuddy uses **WorkManager** to send timely hydration reminders, even when the app is closed.  
 Notifications include motivational messages and open the app when tapped.
 
 ---
 
-## 💾 **Data Storage**
+##  **Data Storage**
 All data is saved securely using **SharedPreferences**:
 - User login details  
 - Habits and completion history  
@@ -104,14 +104,14 @@ Gson is used for JSON serialization of objects to ensure easy storage and retrie
 
 ---
 
-## 🧠 **State Management**
+##  **State Management**
 - The app preserves state using SharedPreferences and adapters.
 - Fragment states (like habits/moods lists) remain consistent while navigating.
 - UI instantly updates when users add or delete data.
 
 ---
 
-## 🎨 **UI/UX Highlights**
+##  **UI/UX Highlights**
 - Followed **Material Design 3** guidelines.  
 - Used **ConstraintLayout** for responsive design across all screen sizes.  
 - Applied **60-30-10 color balance rule** for visual harmony.  
@@ -119,17 +119,17 @@ Gson is used for JSON serialization of objects to ensure easy storage and retrie
 
 ---
 
-## 🌟 **Acknowledgments**
+##  **Acknowledgments**
 Special thanks to my lecturer, instructors and colleagues for guidance and feedback throughout this project.  
 This app was developed as part of my **Mobile Application Development Module Lab Exam 03 (2025)**.
 
 ---
 
-## 📜 **License**
+##  **License**
 This project is licensed under the **MIT License** — feel free to use and improve with proper credits.
 
 ---
 
-## 💬 **Final Note**
+##  **Final Note**
 > WellnessBuddy isn’t just an app — it’s a small step toward a more mindful, healthy lifestyle.  
-> Stay consistent. Stay hydrated. Stay well. 💧💚
+> Stay consistent. Stay hydrated. Stay well. 
